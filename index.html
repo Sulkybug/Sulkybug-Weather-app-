@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Andres Angulo" />
+    <title>Weather Info</title>
+    <link rel="icon" href="img/weather.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="module"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="mainBox">
+      <div class="card">
+        <div class="search">
+          <input type="text" class="search-bar" placeholder="Search" value="" />
+          <button>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              height="1.5em"
+              width="1.5em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="weather loading">
+          <h2 class="city">Weather loading...</h2>
+          <div class="date"><p>../...../.... - ......</p></div>
+          <div class="tempBox">
+            <h1 class="temp">--</h1>
+            <button class="tempButton c">ºC</button>
+            <p class="division">|</p>
+            <button class="tempButton f">ºF</button>
+          </div>
+          <div class="flex">
+            <img
+              src="https://openweathermap.org/img/wn/04n.png"
+              alt=""
+              class="icon"
+            />
+            <div class="description">....</div>
+          </div>
+          <div class="pressure">Pressure: ....</div>
+          <div class="humidity">Humidity: ...</div>
+          <div class="dewPoint">Dew point: 6°C</div>
+          <div class="windBox">
+            <div class="wind">Wind speed: ... m/s - Deg: ...º</div>
+            <div class="arrow">➤</div>
+          </div>
+          <div class="visibility">Visibility: ...km</div>
+        </div>
+      </div>
+      <div class="forecastBox">
+        <div class="minBox day1">
+          <img
+            src="https://openweathermap.org/img/wn/04n.png"
+            alt=""
+            class="icon1 miniIcons"
+          />
+          <p class="infoDay1 forecastInfo miniDes">---</p>
+          <div class="infoBox">
+            <p class="date1 forecastInfo">--|--</p>
+          </div>
+        </div>
+        <p class="division1">|</p>
+        <div class="minBox day2">
+          <img
+            src="https://openweathermap.org/img/wn/04n.png"
+            alt=""
+            class="icon2 miniIcons"
+          />
+          <p class="infoDay2 forecastInfo miniDes">---</p>
+          <div class="infoBox">
+            <p class="date2 forecastInfo">--|--</p>
+          </div>
+        </div>
+        <p class="division1">|</p>
+        <div class="minBox day3">
+          <img
+            src="https://openweathermap.org/img/wn/04n.png"
+            alt=""
+            class="icon3 miniIcons"
+          />
+          <p class="infoDay3 forecastInfo miniDes">---</p>
+          <div class="infoBox">
+            <p class="date3 forecastInfo">--|--</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

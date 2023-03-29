@@ -1,0 +1,249 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: #222;
+  background-image: url("https://source.unsplash.com/1920x1080/?landscape");
+  font-size: 120%;
+}
+
+.card {
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+  box-shadow: none;
+  margin-bottom: 5px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background-color: #7c7c7c49;
+  color: white;
+  padding: 0.4em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #7c7c7ccb;
+  cursor: pointer;
+  scale: 1.05;
+  transition: 0.35s ease-in-out;
+  color: aquamarine;
+}
+
+.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background-color: #7c7c7c49;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+  text-transform: capitalize;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.icon {
+  scale: 1.5;
+  background: aquamarine;
+  background: none;
+}
+
+.windBox {
+  height: 26px;
+  display: flex;
+}
+
+.arrow {
+  transform: rotate(-90deg);
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wind {
+  margin-right: 10px;
+}
+
+.tempBox {
+  display: flex;
+  align-items: center;
+}
+
+.tempButton {
+  font-size: 2em;
+  background: none;
+  margin: 0;
+  margin-bottom: 0.3em;
+  padding: 30px;
+  width: 20px;
+}
+
+.tempButton:hover {
+  background: none;
+}
+
+.division {
+  font-size: 2em;
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+
+.f {
+  color: rgba(255, 255, 255, 0.267);
+}
+
+.pressure,
+.humidity,
+.dewPoint,
+.windBox,
+.visibility {
+  margin-bottom: 3px;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+.date {
+  margin-bottom: 15px;
+  font-size: 95%;
+}
+
+.forecastBox {
+  background: #000000d0;
+  color: white;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2.3em;
+  padding-bottom: 0.1em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+  margin-top: 5px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mainBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.minBox {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.miniIcons {
+  scale: 1.5;
+}
+
+.forecastInfo {
+  margin: 0;
+  width: 100px;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.miniDes {
+  font-weight: bold;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.division1 {
+  font-size: 2em;
+  margin: 0;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 0.3em;
+}
+
+@media only screen and (max-width: 720px), (max-height: 650px) {
+  body {
+    scale: 0.87;
+    background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  }
+
+  .mainBox {
+    padding: 0.9em;
+    min-width: 340px;
+    max-width: 600px;
+  }
+
+  .card {
+    padding: 0.9em;
+    min-width: 340px;
+    max-width: 600px;
+  }
+
+  .forecastBox {
+    padding: 0.9em;
+    min-width: 340px;
+    max-width: 600px;
+    padding-top: 2.2em;
+    padding-bottom: 0.1em;
+  }
+
+  .forecastInfo {
+    font-size: 0.65em;
+  }
+
+  .division1 {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
