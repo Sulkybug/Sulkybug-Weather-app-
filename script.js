@@ -171,20 +171,30 @@ let weather = {
         "Visibility: " + (visibility / 1000).toFixed(2) + distanceUnits;
     }
 
-    if (window.screen.width < 800) {
-      document.body.style.backgroundImage =
-        "url('https://source.unsplash.com/1600x900/? " +
-        name +
-        "&w=720&dpr=2')";
-    } else {
-      document.body.style.backgroundImage =
-        "url('https://source.unsplash.com/1920x1080/? " + name + "')";
-    }
+    fetchUnsplashImage(name);
   },
   search: function () {
     this.fetchWeather(input.value);
   },
 };
+
+function fetchUnsplashImage(city) {
+  const unsplashAccessKey = "XSaE2uhm-aK9iMaQQyF3MG25kAuv0dfSM3uV4T7j-gI";
+  fetch(
+    `https://api.unsplash.com/photos/random?query=${city}&client_id=${unsplashAccessKey}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      if (window.screen.width < 800) {
+        document.body.style.backgroundImage = `url(${data.urls.regular})`;
+      } else {
+        document.body.style.backgroundImage = `url(${data.urls.full})`;
+      }
+    })
+    .catch((error) =>
+      console.error("Error fetching image from Unsplash:", error)
+    );
+}
 
 button.addEventListener("click", function () {
   weather.search();
