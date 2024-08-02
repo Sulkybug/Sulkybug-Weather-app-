@@ -27,7 +27,8 @@ function Forecast(city) {
           `${units}`
       )
         .then((response) => response.json())
-        .then((data) => this.displaydate(data));
+        .then((data) => this.displaydate(data))
+        .catch((error) => console.error("Error:", error));
     },
     displaydate: function (data) {
       const dateinfo1 = data.list[4].dt_txt;
